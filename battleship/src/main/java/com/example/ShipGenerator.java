@@ -19,14 +19,13 @@ public class ShipGenerator {
 	}
 	
 	protected static ArrayList<String> generateShip(){
-		// tạo một ArrayList lưu vị trí các thuyền ngăn cách các vị trí bởi "/"
+		// khởi tạo lại shipLocation, NodeIndex lưu vị trí các thuyền ngăn cách các vị trí bởi "/"
 		shipsLocation = new ArrayList <String> ();
 		NodeIndex = new HashMap <String,Node> ();
 		shipsLocation.add("/");
 
-		// từ các phân tử trong shipSizes
+		// từ các phân tử trong shipSizes khởi tạo String mới với kích thước bằng phần tử trong shipSizes
 		for (int i=0; i<5; i++ ) {
-			// khởi tạo String mới với kích thước bằng phần tử trong shipSizes
 			String[] currentShip = new String[shipSizes[i]];
 			boolean flag  = false;
 			while (!flag) {
@@ -36,7 +35,7 @@ public class ShipGenerator {
 				Boolean horizontal = toss();
 				if (horizontal) {
 					// Gọi hàm random lấy ra một ký tự trong khoảng A-J
-					// và lấy ra một số trong khoảng từ 0-(10-i)
+					// và lấy ra một số trong khoảng từ 0-(10-shipSizes[i])
 					l = (char) (int) (Math.random()*10 +65);
 					n = (int)(Math.random() *(10-shipSizes[i]) );
 					// thêm tọa độ vị trí của các mảnh của thuyền vào currentShip 
@@ -45,7 +44,7 @@ public class ShipGenerator {
 					}
 				}
 				else {
-					// Gọi hàm random lấy ra một ký tự trong khoảng A-(J-i)
+					// Gọi hàm random lấy ra một ký tự trong khoảng A-(J-shipSizes[i])
 					// và lấy ra một số trong khoảng từ 0-10
 					l = (char) (int) (Math.random()*(10-shipSizes[i]) +65);
 					n = (int)(Math.random() *(10));
@@ -54,7 +53,8 @@ public class ShipGenerator {
 						currentShip[j] = (char)(l+j)+""+n;
 					}
 				}
-				// Lấy ra từng thành phần của currentShip xem xét nó đã có mặt trong shipsLocation chưa. Nếu có đặt lại flag = false và hủy vòng lặp
+				// Lấy ra từng thành phần của currentShip xem xét nó đã có mặt trong shipsLocation
+				// Nếu có đặt lại flag = false và hủy vòng lặp for quay lại chọn vị trí khác
 				for (String s:currentShip) {
 					if (shipsLocation.contains(s)) {
 						flag = false;
@@ -62,13 +62,13 @@ public class ShipGenerator {
 					}
 				}
 
-				// nếu như mà không bị trùng lặp thì add vào trong shipsLocation
+				// nếu như mà không bị trùng lặp thì thêm vào trong shipsLocation
 				if (flag) {
 					for (String s:currentShip) {
 						shipsLocation.add(s);
 					}
 					for (int j = 0; j < shipSizes[i]; j++) {
-						// thiết lập lại các node của button chứa thuyền
+						// thiết lập thông tin node của button chứa thuyền
 						Node node = new Node();
 						String str;
 						if(horizontal){

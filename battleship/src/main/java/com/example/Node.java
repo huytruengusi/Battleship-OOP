@@ -1,8 +1,5 @@
 package com.example;
 
-import javax.swing.JToggleButton;
-import javax.swing.ImageIcon;
-
 public class Node {
     private String imgURL;
     private String pieceOfShips;

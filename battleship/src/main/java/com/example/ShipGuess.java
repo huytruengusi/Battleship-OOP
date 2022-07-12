@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class ShipGuess {
 	private String hit;
-	protected ArrayList <String> possible = new ArrayList <String>();
+	private ArrayList <String> possible = new ArrayList <String>();
 
 	public ShipGuess() {
 		
 	}
 
-	protected void think (int conStrikes, String hit){
+	public void think (int conStrikes, String hit){
 		if (conStrikes==0) {
 			// Lưu tọa độ của 4 điểm bên cạnh điểm vừa bắn vào trong possible
 			String hit1 = (char) (hit.charAt(0) + 1) + "" +hit.charAt(1);

@@ -2,9 +2,7 @@ package com.example;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JLayeredPane;
-import javax.swing.JScrollPane;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,8 +14,6 @@ import java.awt.Toolkit;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class StartMenu extends JFrame {
 	private JPanel contentPane;
@@ -32,9 +28,9 @@ public class StartMenu extends JFrame {
 	 * Launch the application.
 	 */
 	
+	//  Constuctor khởi tạo StartMenu
 	public StartMenu() {
-		
-		// khởi tạo lại điểm số ban đầu
+
 		setIconImage(Toolkit.getDefaultToolkit().getImage(StartMenu.class.getResource("/com/img/NewLogo.png")));
 		setBounds(0,0, 1920,1080 );
 		contentPane = new JPanel();
@@ -75,10 +71,6 @@ public class StartMenu extends JFrame {
 		
 		// Button điều chỉnh Độ khó
 		btnDifficult = new JButton(StartGame.isDifficult() ? "Hard" : "Easy");
-		btnDifficult.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btnDifficult.setBounds(120, 447, 300, 75);
 		btnDifficult.setBackground(new Color(135,206,235));
 		btnDifficult.setFont(new Font("Snap ITC", Font.BOLD, 30));
@@ -120,10 +112,6 @@ public class StartMenu extends JFrame {
 		
 		// Nút bật/ tắt âm lượng
 		btnMusicOnOff = new JButton(StartGame.isMusicOn() ? "Sound: On" : "Sound: Off");
-		btnMusicOnOff.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btnMusicOnOff.setBounds(120, 623, 300, 75);
 		btnMusicOnOff.setBackground(new Color(135,206,235));
 		btnMusicOnOff.setFont(new Font("Snap ITC", Font.BOLD, 30));
@@ -150,6 +138,4 @@ public class StartMenu extends JFrame {
 	public JButton getBtnMusicOnOff() {
 		return btnMusicOnOff;
 	}
-
-	
 }

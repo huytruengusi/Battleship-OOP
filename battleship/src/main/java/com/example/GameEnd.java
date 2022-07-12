@@ -22,6 +22,11 @@ public class GameEnd extends JFrame {
     private JButton highScore;
 
     public GameEnd(boolean isPlayWin) {
+		StartGame.saveGame();
+		if (StartGame.isMusicOn()){
+			StartGame.getClip().stop();
+			// StartGame.play(menus);
+		}
         setIconImage(Toolkit.getDefaultToolkit().getImage(StartMenu.class.getResource("/com/img/NewLogo.png")));
 		setBounds(0,0, 1920,1080 );
 		contentPane = new JPanel();
@@ -48,6 +53,12 @@ public class GameEnd extends JFrame {
 		panel.setBounds(0, 0, 1920, 1080);
 		layeredPane.add(panel);
 		panel.setLayout(null);
+
+		JLabel playerScore = new JLabel("SCORE: " + StartGame.getPlayerScore());
+		playerScore.setBounds(780,600,500,200);
+		playerScore.setFont(new Font("Snap ITC", Font.BOLD, 50));
+		playerScore.setForeground(Color.white);
+		panel.add(playerScore);
 
          // button Back về Menu
 		playAgain = new JButton("Play Again");

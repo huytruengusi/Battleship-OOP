@@ -104,7 +104,7 @@ public class StartGame {
 		});	
 	}
 
-	protected static void playGame () {	
+	public static void playGame () {	
 		// khởi tạo màn hình đặt thuyền với kích thước 2 phần tối đa có khả năng trang trí trên đó
 		resetValue();
 		setShips = new SetShips (); 
@@ -198,7 +198,16 @@ public class StartGame {
 
 			// Xóa tên button ra khỏi danh sách vị trí enemyShips thiết lập lại icon bắn trúng cho button
 			// Viết vào textArea báo rằng đã bắn trúng tăng điểm người chơi, giảm HP máy
-			board.setTextPlayerScore("SCORE: " + ++playerScore);
+			String nameships =  enemyNodeShips.get(button.getName()).getPieceOfShips();
+			switch(nameships){
+				case "Carrier":	  playerScore += 10;break;
+				case "Battleship":playerScore += 20;break;
+				case "Submarine": playerScore += 50;break;
+				case "Cruiser":	  playerScore += 50;break;
+				case "Destroyer": playerScore += 100;break;
+			}
+
+			board.setTextPlayerScore("SCORE: " + playerScore);
 			board.setTextComputerHP("HP: " + --computerHP);
 			enemyShips.remove(button.getName());
 			previousHit.add(button.getName());
@@ -217,7 +226,6 @@ public class StartGame {
 					// nếu có 2 "/" đứng cạnh nhau thì gọi ra hàm nổ và bỏ bớt một ngoặc
 					// Viết vào textArea báo rằng đã có thuyền bị phá hủy
 				if (Count == 2) {
-					String nameships =  enemyNodeShips.get(button.getName()).getPieceOfShips();
 					for (int j=0; j<previousHit.size(); j++){
 						if (enemyNodeShips.get(previousHit.get(j)).getPieceOfShips().contains(nameships)){
 							String imgURL = enemyNodeShips.get(previousHit.get(j)).getImgURL() + "-death.png" ;
@@ -246,7 +254,6 @@ public class StartGame {
 
 		// nếu đã chiến thắng hiện ra dialog
 		if (numberOfComputerShips == 0) {
-			saveGame();
 			GameEnd gameEnd = new GameEnd(true);
 			gameEnd.setExtendedState(JFrame.MAXIMIZED_BOTH);
 			gameEnd.setUndecorated (true);
@@ -295,7 +302,7 @@ public class StartGame {
 	}
 
 	// Hàm gọi ra tiếng nổ khi bắn trúng
-	protected static void boom (){
+	public static void boom (){
 		Clip clip2;
 		try{
 			URL url = StartGame.class.getResource("/com/sound/boom.wav");
@@ -310,9 +317,9 @@ public class StartGame {
 		}
 	}
 
-	private static void saveGame(){
+	public static void saveGame(){
 		try{
-			FileWriter fw = new FileWriter("battleship/src/History.txt",true);
+			FileWriter fw = new FileWriter(difficult ? "battleship/src/main/java/com/HistoryHard.txt":"battleship/src/main/java/com/HistoryEasy.txt",true);
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write(playerScore+"\n");
 			bw.close();
@@ -324,8 +331,9 @@ public class StartGame {
 
 	// hàm khởi tạo lại các giá trị
 	private static void resetValue(){
-		numberofTurn = 0;
 		playerTurn = true;
+		playerScore = 0;
+		numberofTurn = 0;
 		playerHP=17;
 		computerHP=17;
 		numberOfComputerShips=5;

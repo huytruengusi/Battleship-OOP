@@ -23,11 +23,6 @@ import java.awt.Font;
 import java.awt.Toolkit;
 
 public class Board extends JFrame {
-
-	public HashMap<String, JToggleButton> getBtns() {
-		return btns;
-	}
-
 	private HashMap<String,JToggleButton > btns = new HashMap <String,JToggleButton> ();
 	private HashMap<String,Node> NodeIndex = new HashMap <String,Node> ();
 	private final ArrayList <JToggleButton> btnsEnemy = new ArrayList <JToggleButton> ();
@@ -46,11 +41,11 @@ public class Board extends JFrame {
 
 	private JPanel panelSelf;
 	private JPanel contentPane;
-	private JButton MainMenu;
-	private JButton MusicOnOff;
+	private JButton mainMenu;
+	private JButton musicOnOff;
 	private JTextArea textArea;
 	private JLayeredPane layeredPane_1;
-	private JButton Close;
+	private JButton close;
 	
 	public Board(ArrayList<String> list, HashMap<String,Node> node) {
 		NodeIndex = node;
@@ -312,35 +307,35 @@ public class Board extends JFrame {
 	}
 	
 	private void addButtons (JLayeredPane layeredPane) {	
-		// MusicOnOff Button
-		MusicOnOff = new JButton(StartGame.isMusicOn() ? "Sound On" : "Sound Off");
-		layeredPane.setLayer(MusicOnOff, 1);
-		MusicOnOff.setBounds(1562, 774, 237, 41);
-		layeredPane.add(MusicOnOff);
-		MusicOnOff.setBackground(new Color(135,206,235));
-		MusicOnOff.setFont(new Font("Snap ITC", Font.PLAIN, 25));
+		// musicOnOff Button
+		musicOnOff = new JButton(StartGame.isMusicOn() ? "Sound On" : "Sound Off");
+		layeredPane.setLayer(musicOnOff, 1);
+		musicOnOff.setBounds(1562, 774, 237, 41);
+		layeredPane.add(musicOnOff);
+		musicOnOff.setBackground(new Color(135,206,235));
+		musicOnOff.setFont(new Font("Snap ITC", Font.PLAIN, 25));
 
-		// MainMenu Button
-		MainMenu = new JButton("Main Menu");
-		layeredPane.setLayer(MainMenu, 1);
-		MainMenu.setBounds(1562, 824, 237, 41);
-		layeredPane.add(MainMenu);
-		MainMenu.setBackground(new Color(135,206,235));
-		MainMenu.setFont(new Font("Snap ITC", Font.PLAIN, 25));
+		// mainMenu Button
+		mainMenu = new JButton("Main Menu");
+		layeredPane.setLayer(mainMenu, 1);
+		mainMenu.setBounds(1562, 824, 237, 41);
+		layeredPane.add(mainMenu);
+		mainMenu.setBackground(new Color(135,206,235));
+		mainMenu.setFont(new Font("Snap ITC", Font.PLAIN, 25));
 		
-		// Close Button
-		Close = new JButton("Close");
-		layeredPane.setLayer(Close, 1);
-		Close.setBounds(1562, 874, 237, 41);
-		Close.setBackground(new Color(135,206,235));
-		Close.setFont(new Font("Snap ITC", Font.PLAIN, 25));
-		// thêm thành phần nhận sự kiện vào Button Close (Board), đóng chương trình khi bấm vào
-		Close.addMouseListener(new MouseAdapter(){
+		// close Button
+		close = new JButton("close");
+		layeredPane.setLayer(close, 1);
+		close.setBounds(1562, 874, 237, 41);
+		close.setBackground(new Color(135,206,235));
+		close.setFont(new Font("Snap ITC", Font.PLAIN, 25));
+		// thêm thành phần nhận sự kiện vào Button close (Board), đóng chương trình khi bấm vào
+		close.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e) {
 				System.exit(0);
 			}
 		});
-		layeredPane.add(Close);
+		layeredPane.add(close);
 	}
 
 	public void setTextPlayerScore(String str){
@@ -376,18 +371,21 @@ public class Board extends JFrame {
 	}
 
 	public void setTextMusicOnOff(String str){
-		MusicOnOff.setText(str);
+		musicOnOff.setText(str);
 	}
 
 	public JButton getMusicOnOff() {
-		return MusicOnOff;
+		return musicOnOff;
 	}
 
 	public JButton getMainMenu() {
-		return MainMenu;
+		return mainMenu;
 	}
 
 	public void setTextlblTurn(String str){
 		lblTurn.setText(str);
+	}
+	public HashMap<String, JToggleButton> getBtns() {
+		return btns;
 	}
 }

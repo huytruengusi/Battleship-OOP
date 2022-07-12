@@ -48,8 +48,7 @@ public class ComputerTurn implements Runnable{
 					}
 
 					if (flag) {
-						// if (StartGame.isDifficult() && ((int)(Math.random()*10) >= 0)){
-						if (StartGame.isDifficult() ){
+						if (StartGame.isDifficult() && ((int)(Math.random()*10) > 0)){
 							while(true){
 								ArrayList<String> list = StartGame.getPlayerShips();
 								int i = list.size();
