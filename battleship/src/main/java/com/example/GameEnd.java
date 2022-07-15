@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.border.EmptyBorder;
+import java.net.URL;
+import javax.sound.sampled.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,8 +27,13 @@ public class GameEnd extends JFrame {
 		StartGame.saveGame();
 		if (StartGame.isMusicOn()){
 			StartGame.getClip().stop();
-			// StartGame.play(menus);
+			if (isPlayWin){
+				winSound();
+			}else{
+				loseSound();
+			}
 		}
+
         setIconImage(Toolkit.getDefaultToolkit().getImage(StartMenu.class.getResource("/com/img/NewLogo.png")));
 		setBounds(0,0, 1920,1080 );
 		contentPane = new JPanel();
@@ -67,6 +74,7 @@ public class GameEnd extends JFrame {
 		playAgain.setBackground(new Color(135,206,235));
         playAgain.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
+				StartGame.play(StartGame.class.getResource("/com/sound/Automation.wav"));
 				StartGame.playGame();
                 dispose();
             }
@@ -102,4 +110,36 @@ public class GameEnd extends JFrame {
         });
 		panel.add(highScore);
     }
+
+	// Hàm gọi ra tiếng nổ khi bắn trúng
+	public void winSound (){
+		Clip clip2;
+		try{
+			URL url = StartGame.class.getResource("/com/sound/win.wav");
+			AudioInputStream sound = AudioSystem.getAudioInputStream(url);	
+			clip2 = AudioSystem.getClip();
+			clip2.open(sound);
+			clip2.start();
+			Thread.sleep(2000);	
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+	// Hàm gọi ra tiếng nổ khi bắn trúng
+	public void loseSound (){
+		Clip clip2;
+		try{
+			URL url = StartGame.class.getResource("/com/sound/lose.wav");
+			AudioInputStream sound = AudioSystem.getAudioInputStream(url);	
+			clip2 = AudioSystem.getClip();
+			clip2.open(sound);
+			clip2.start();
+			Thread.sleep(2000);	
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 }

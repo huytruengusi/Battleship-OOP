@@ -15,7 +15,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
 
-import java.io.CharArrayWriter;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -288,7 +287,7 @@ public class StartGame {
 	}
 
 	// Hàm cho phép bật nhạc nền liên tục
-	private static void play (URL url) {
+	public static void play (URL url) {
 		try{
 			AudioInputStream sound = AudioSystem.getAudioInputStream(url);	
 			clip = AudioSystem.getClip();

@@ -28,6 +28,7 @@ public class ComputerTurn implements Runnable{
 	public void run() {
 		previousHit = new ArrayList<String>();
 		ArrayList <String> previousStrikes = new ArrayList<String>();
+		int countTurn=0;
 		while (true) {
 			boolean flag = true;
 			synchronized (this){
@@ -48,21 +49,23 @@ public class ComputerTurn implements Runnable{
 					}
 
 					if (flag) {
-						if (StartGame.isDifficult() && ((int)(Math.random()*10) > 0)){
+						if (StartGame.isDifficult() && (countTurn==5)){
 							while(true){
+								System.out.println("1");
 								ArrayList<String> list = StartGame.getPlayerShips();
 								int i = list.size();
 								int location = (int)(Math.random()*i);
 								if (list.get(location) != "/"){
 									hit = list.get(location);
 									previousStrikes.add(hit);
-										conStrikes =0;
+										conStrikes = 0;
 										break;
 								}
 							}
 						}else{
 							while (true){
 								// testHit ở vị trí ngẫu nhiên
+								System.out.println("2");
 								testHit = (char) (int) (Math.random()*10 +65) + "" + ((int)(Math.random() *10 ));
 								if (testHit.charAt(0)<'K' && testHit.charAt(0)>'@' && testHit.charAt(1)<':' && testHit.charAt(1)>'/') {
 									if (!previousStrikes.contains(testHit) ) {
@@ -94,7 +97,7 @@ public class ComputerTurn implements Runnable{
 						previousHit.add(hit);
 						StartGame.setPlayerHP(StartGame.getPlayerHP()-1);
 						board.setTextPlayerHP("HP: " + StartGame.getPlayerHP());
-
+						countTurn = 0;
 						// nếu trước đó chưa bắn trúng thì thiết lập điểm vừa bắn trúng
 						if (conStrikes == 0){
 							brains.setHit(hit);
@@ -149,6 +152,7 @@ public class ComputerTurn implements Runnable{
 					} else {
 						// Thiết lập lại icon bắn trượt cho button, chuyển lượt bắn cho người chơi
 						// Viết vào textArea báo bắn trượt
+						countTurn++;
 						button.setIcon(new ImageIcon(Board.class.getResource("/com/img/miss.png")));
 						button.setDisabledIcon(new ImageIcon(Board.class.getResource("/com/img/miss.png")));
 						board.appendTextArea("It was a miss\n");

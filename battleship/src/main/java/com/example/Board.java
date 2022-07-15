@@ -324,7 +324,7 @@ public class Board extends JFrame {
 		mainMenu.setFont(new Font("Snap ITC", Font.PLAIN, 25));
 		
 		// close Button
-		close = new JButton("close");
+		close = new JButton("Close");
 		layeredPane.setLayer(close, 1);
 		close.setBounds(1562, 874, 237, 41);
 		close.setBackground(new Color(135,206,235));
