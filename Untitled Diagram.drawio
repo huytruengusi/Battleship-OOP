@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-17T07:48:36.643Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.132 Safari/537.36" etag="3CPKjqWvgoLtOKbSB26X" version="20.1.1" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2022-07-17T08:58:39.726Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.132 Safari/537.36" etag="X3N_oqzT_8X-sr8CNI1Q" version="20.1.1" type="github" pages="9">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="UML">
-    <mxGraphModel dx="1471" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1014" dy="503" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -157,7 +157,7 @@
         <mxCell id="wd6_GuGvfmllF0Qj1SvD-30" value="SetShips" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1145" y="730" width="300" height="490" as="geometry" />
         </mxCell>
-        <mxCell id="wd6_GuGvfmllF0Qj1SvD-31" value="- buttonGroup: ButtonGroup&#xa;- contentPane: JPanel&#xa;- horizontal: boolean&#xa;- listIndex: int;&#xa;- shipSize: int;&#xa;- shipSelected: String&#xa;- playerAvatar: JLabel&#xa;- playerScore:  JLabel&#xa;- playerHP:  JLabel&#xa;- playerShips: JLabel&#xa;- computerAvatar: JLabel&#xa;- computerDifficult: JLabel&#xa;- computerHP: JLabel&#xa;- computerShips: JLabel&#xa;- ButtonIndex: HashMap &lt;String,JToggleButton&gt;&#xa;- NodeIndex: HashMap &lt;String,Node&gt; &#xa;- shipsLocation:  ArrayList&lt;String&gt;;&#xa;- shipList: ShipList &#xa;- layeredPane: JLayeredPane&#xa;- background: JLabel&#xa;- btnPlay: JButton&#xa;- Back: JButton&#xa;- Exit:  JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="wd6_GuGvfmllF0Qj1SvD-30" vertex="1">
+        <mxCell id="wd6_GuGvfmllF0Qj1SvD-31" value="- buttonGroup: ButtonGroup&#xa;- contentPane: JPanel&#xa;- horizontal: boolean = true&#xa;- listIndex: int;&#xa;- shipSize: int;&#xa;- shipSelected: String&#xa;- playerAvatar: JLabel&#xa;- playerScore:  JLabel&#xa;- playerHP:  JLabel&#xa;- playerShips: JLabel&#xa;- computerAvatar: JLabel&#xa;- computerDifficult: JLabel&#xa;- computerHP: JLabel&#xa;- computerShips: JLabel&#xa;- ButtonIndex: HashMap &lt;String,JToggleButton&gt;&#xa;- NodeIndex: HashMap &lt;String,Node&gt; &#xa;- shipsLocation:  ArrayList&lt;String&gt;;&#xa;- shipList: ShipList &#xa;- layeredPane: JLayeredPane&#xa;- background: JLabel&#xa;- btnPlay: JButton&#xa;- Back: JButton&#xa;- Exit:  JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="wd6_GuGvfmllF0Qj1SvD-30" vertex="1">
           <mxGeometry y="26" width="300" height="334" as="geometry" />
         </mxCell>
         <mxCell id="wd6_GuGvfmllF0Qj1SvD-32" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="wd6_GuGvfmllF0Qj1SvD-30" vertex="1">
@@ -277,7 +277,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="package" id="73l_bzCXaqRYJo8Qw0Vh">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2298" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="EzERft0aN6xMqZyVUO99-0" />
         <mxCell id="EzERft0aN6xMqZyVUO99-1" parent="EzERft0aN6xMqZyVUO99-0" />
@@ -598,7 +598,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="tF8Au3-olGF32qq5376A" name="USECASE tổng quát">
-    <mxGraphModel dx="1231" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1471" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -611,7 +611,7 @@
             <mxPoint x="160" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PVCuRrwvSmHZwgG6Lpev-9" value="Play Game" style="ellipse;whiteSpace=wrap;html=1;strokeColor=default;" parent="1" vertex="1">
+        <mxCell id="PVCuRrwvSmHZwgG6Lpev-9" value="Start" style="ellipse;whiteSpace=wrap;html=1;strokeColor=default;" parent="1" vertex="1">
           <mxGeometry x="160" y="310" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PVCuRrwvSmHZwgG6Lpev-10" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="PVCuRrwvSmHZwgG6Lpev-9" target="PVCuRrwvSmHZwgG6Lpev-11" edge="1">
@@ -650,12 +650,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9BRpGPmEaLudOfs43074" name="USECASE Play Game">
-    <mxGraphModel dx="1231" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="9BRpGPmEaLudOfs43074" name="USECASE Start">
+    <mxGraphModel dx="1471" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="_m76Gi0EPtyf8xCHKLda-1" value="Play Game" style="ellipse;whiteSpace=wrap;html=1;strokeColor=default;" parent="1" vertex="1">
+        <mxCell id="_m76Gi0EPtyf8xCHKLda-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;strokeColor=default;" parent="1" vertex="1">
           <mxGeometry x="350" y="320" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="_fY5ud300w4sbtWL9eM7-1" value="Set Sound" style="ellipse;whiteSpace=wrap;html=1;strokeColor=default;" parent="1" vertex="1">
@@ -741,7 +741,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="CFlMl9b3xsBLCgWiwQiw" name="USECASE Set Ship">
-    <mxGraphModel dx="1231" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1471" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -787,7 +787,7 @@
             <mxPoint x="234.81149078861085" y="353.40066589553044" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1EjwIoBlxBzmLnlfTvAp-9" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" target="1EjwIoBlxBzmLnlfTvAp-5" edge="1" source="1EjwIoBlxBzmLnlfTvAp-3">
+        <mxCell id="1EjwIoBlxBzmLnlfTvAp-9" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="1EjwIoBlxBzmLnlfTvAp-3" target="1EjwIoBlxBzmLnlfTvAp-5" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="610" y="400" as="sourcePoint" />
             <mxPoint x="730" y="520" as="targetPoint" />
@@ -803,7 +803,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="47BsbKUvN2gJz4Ya0Doa" name="USECASE Fight">
-    <mxGraphModel dx="1231" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1471" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -841,7 +841,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2eFBIYCcNW01YJbX844N" name="Biểu đồ trình tự PlayGame">
-    <mxGraphModel dx="1405" dy="688" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1132" dy="561" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1140,7 +1140,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="f5T63k6Mxykr1vQptAyK" name="Biểu đồ trình tự SetShip">
-    <mxGraphModel dx="2101" dy="2162" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1226" dy="1777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1383,7 +1383,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="jgq3P15CQa50jO-A3Xrx" name="Page-9">
-    <mxGraphModel dx="1231" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1471" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
