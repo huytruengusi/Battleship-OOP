@@ -133,7 +133,7 @@ public class StartGame {
 					board.setVisible(true);
 					
 					// Gọi lời mở đầu cho game
-					board.appendTextArea("Game Started \n \n");
+					board.appendTextArea("\tGame Started \n \n");
 					
 					// thêm thành phần nhận sự kiện vào Button MainMenu (Board), Đóng Board và khởi tạo StartMenu
 					board.getMainMenu().addMouseListener(new MouseAdapter()  {
@@ -332,7 +332,7 @@ public class StartGame {
 	private static void resetValue(){
 		playerTurn = true;
 		playerScore = 0;
-		numberofTurn = 0;
+		numberofTurn = 1;
 		playerHP=17;
 		computerHP=17;
 		numberOfComputerShips=5;
@@ -381,10 +381,6 @@ public class StartGame {
 
 	public static ArrayList<String> getPlayerShips() {
 		return playerShips;
-	}
-
-	public static int getNumberofTurn() {
-		return numberofTurn;
 	}
 
 	public static Clip getClip() {

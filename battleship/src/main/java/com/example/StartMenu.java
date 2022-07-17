@@ -3,6 +3,7 @@ package com.example;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLayeredPane;
+import javax.swing.JOptionPane;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -14,6 +15,9 @@ import java.awt.Toolkit;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 
 public class StartMenu extends JFrame {
 	private JPanel contentPane;
@@ -103,6 +107,29 @@ public class StartMenu extends JFrame {
 			System.exit (0);
 			}
 		});
+
+		JLabel lblNewLabel_1 = new JLabel("Rules");
+		lblNewLabel_1.setForeground(Color.ORANGE);
+		lblNewLabel_1.setFont(new Font("Snap ITC", Font.PLAIN, 30));
+		lblNewLabel_1.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				JOptionPane.showMessageDialog(null, "*Objective:\n"+
+				"Defeat 5 enemy warships\n"+
+				"*Prepare:\n"+
+				"Players have a 10x10 board to place 5 boats of different sizes: Carrier: 5, Battleship: 4, Submarines: 3, Cruiser: 3, Destroyer: 2.\n"
+				+"*The Rule of Set Ship:\n"
+				+"+ Place the Ship in the horizontal position, not diagonally.\n"
+				+"+ Do not place the keys on top of each other so that it has the same number and letter.\n"
+				+"+ Do not change the position of the ship when the game starts.\n"
+				+"*How to play:\n"
+				+"You are the first player, you and the computer play alternately.\n"
+				+"Each time you shoot a bullet to try to hit the enemy ship, if you hit you will get an extra shot.", "Crew advice ", JOptionPane.INFORMATION_MESSAGE, new ImageIcon (Board.class.getResource("/com/img/madam.png")));		
+			}
+		});
+		layeredPane.setLayer(lblNewLabel_1, 1);
+		lblNewLabel_1.setIcon(new ImageIcon(SetShips.class.getResource("/com/img/help.png")));
+		lblNewLabel_1.setBounds(27, 960, 180, 120);
+		panel.add(lblNewLabel_1);
 		
 		// Logo của trò chơi
 		lblNewLabel = new JLabel("");

@@ -51,7 +51,6 @@ public class ComputerTurn implements Runnable{
 					if (flag) {
 						if (StartGame.isDifficult() && (countTurn==5)){
 							while(true){
-								System.out.println("1");
 								ArrayList<String> list = StartGame.getPlayerShips();
 								int i = list.size();
 								int location = (int)(Math.random()*i);
@@ -65,7 +64,6 @@ public class ComputerTurn implements Runnable{
 						}else{
 							while (true){
 								// testHit ở vị trí ngẫu nhiên
-								System.out.println("2");
 								testHit = (char) (int) (Math.random()*10 +65) + "" + ((int)(Math.random() *10 ));
 								if (testHit.charAt(0)<'K' && testHit.charAt(0)>'@' && testHit.charAt(1)<':' && testHit.charAt(1)>'/') {
 									if (!previousStrikes.contains(testHit) ) {

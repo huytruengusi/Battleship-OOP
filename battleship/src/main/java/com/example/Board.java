@@ -68,14 +68,16 @@ public class Board extends JFrame {
 		addElements(layeredPane_1);
 		addButtons(layeredPane_1);
 		
+		// khởi tạo bản đồ của computer
 		panel = new JPanel();
 		layeredPane_1.setLayer(panel, 1);
 		panel.setBounds(170, 290, 521, 521);
 		layeredPane_1.add(panel);
 		panel.setOpaque(false);
 		panel.setLayout(new GridLayout(10, 10, 0, 0));
-		setEnemyGrid(panel);
+		setComputerGrid(panel);
 		
+		// khởi tạo bản đồ của người chơi
 		panelSelf = new JPanel();
 		layeredPane_1.setLayer(panelSelf, 1);
 		panelSelf.setBounds(780, 290, 521, 521);
@@ -100,7 +102,7 @@ public class Board extends JFrame {
 		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 	}
 	
-	private void setEnemyGrid (JPanel panel) {
+	private void setComputerGrid (JPanel panel) {
 		// khởi tạo các ToggleButton trong bảng máy
 		char loopy = 'A';
 		for (int i = 0; i <10; i++) {
@@ -144,8 +146,8 @@ public class Board extends JFrame {
 		layeredPane.add(BackGround);
 
 		// Thiết lập thanh trạng thái
-		lblTurn = new JLabel("TURN: " +StartGame.getNumberofTurn());
-		lblTurn.setBounds(680,120,500,100);
+		lblTurn = new JLabel("TURN: 1" );
+		lblTurn.setBounds(800,120,500,100);
 		layeredPane.setLayer(lblTurn, 1);
 		lblTurn.setForeground(Color.BLACK);
 		lblTurn.setFont(new Font("Snap ITC", Font.BOLD, 35));
@@ -155,7 +157,7 @@ public class Board extends JFrame {
 		playerAvatar = new JLabel("");
 		playerAvatar.setBounds(80,40,180,180);
 		layeredPane.setLayer(playerAvatar, 1);
-		playerAvatar.setIcon(new ImageIcon(SetShips.class.getResource("/com/img/luffy.png")));
+		playerAvatar.setIcon(new ImageIcon(SetShips.class.getResource("/com/img/player.png")));
 		layeredPane.add(playerAvatar);
 		
 		playerScore = new JLabel("SCORE: " + StartGame.getPlayerScore());
@@ -183,7 +185,7 @@ public class Board extends JFrame {
 		computerAvatar = new JLabel("");
 		computerAvatar.setBounds(1650,40,180,180);
 		layeredPane.setLayer(computerAvatar, 1);
-		computerAvatar.setIcon(new ImageIcon(SetShips.class.getResource("/com/img/fujitora.png")));
+		computerAvatar.setIcon(new ImageIcon(SetShips.class.getResource("/com/img/computer.png")));
 		layeredPane.add(computerAvatar);
 		
 		computerDifficult = new JLabel(StartGame.isDifficult() ? "Level: Hard" : "Level: Easy");
@@ -215,7 +217,7 @@ public class Board extends JFrame {
 		lblAAA.setForeground(Color.WHITE);
 		lblAAA.setFont(new Font("Snap ITC", Font.BOLD, 31));
 		
-		// Hàng A
+		// Hàng A bản đồ của máy
 		JLabel lblA = new JLabel("A");
 		layeredPane.setLayer(lblA, 1);
 		lblA.setBounds(129, 287, 32, 52);
@@ -223,7 +225,7 @@ public class Board extends JFrame {
 		lblA.setForeground(Color.WHITE);
 		lblA.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng B
+		// Hàng B bản đồ của máy
 		JLabel lblB = new JLabel("B");
 		layeredPane.setLayer(lblB, 1);
 		lblB.setBounds(129, 339, 32, 52);
@@ -231,7 +233,7 @@ public class Board extends JFrame {
 		lblB.setForeground(Color.WHITE);
 		lblB.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng C
+		// Hàng C bản đồ của máy
 		JLabel lblC = new JLabel("C");
 		layeredPane.setLayer(lblC, 1);
 		lblC.setBounds(129, 391, 32, 52);
@@ -239,7 +241,7 @@ public class Board extends JFrame {
 		lblC.setForeground(Color.WHITE);
 		lblC.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng D
+		// Hàng D bản đồ của máy
 		JLabel lblD = new JLabel("D");
 		layeredPane.setLayer(lblD, 1);
 		lblD.setBounds(129, 443, 32, 52);
@@ -247,7 +249,7 @@ public class Board extends JFrame {
 		lblD.setForeground(Color.WHITE);
 		lblD.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng E
+		// Hàng E bản đồ của máy
 		JLabel lblE = new JLabel("E");
 		layeredPane.setLayer(lblE, 1);
 		lblE.setBounds(129, 495, 32, 52);
@@ -255,7 +257,7 @@ public class Board extends JFrame {
 		lblE.setForeground(Color.WHITE);
 		lblE.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng F
+		// Hàng F bản đồ của máy
 		JLabel lblF = new JLabel("F");
 		layeredPane.setLayer(lblF, 1);
 		lblF.setBounds(129, 547, 32, 52);
@@ -263,7 +265,7 @@ public class Board extends JFrame {
 		lblF.setForeground(Color.WHITE);
 		lblF.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng G
+		// Hàng G bản đồ của máy
 		JLabel lblG = new JLabel("G");
 		layeredPane.setLayer(lblG, 1);
 		lblG.setBounds(129, 599, 32, 52);
@@ -271,7 +273,7 @@ public class Board extends JFrame {
 		lblG.setForeground(Color.WHITE);
 		lblG.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng H
+		// Hàng H bản đồ của máy
 		JLabel lblH = new JLabel("H");
 		layeredPane.setLayer(lblH, 1);
 		lblH.setBounds(129, 651, 32, 52);
@@ -279,7 +281,7 @@ public class Board extends JFrame {
 		lblH.setForeground(Color.WHITE);
 		lblH.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng I
+		// Hàng I bản đồ của máy
 		JLabel lblI = new JLabel("I");
 		layeredPane.setLayer(lblI, 1);
 		lblI.setBounds(129, 703, 32, 52);
@@ -287,7 +289,7 @@ public class Board extends JFrame {
 		lblI.setForeground(Color.WHITE);
 		lblI.setFont(new Font("Snap ITC", Font.BOLD, 33));
 		
-		// Hàng J
+		// Hàng J bản đồ của máy
 		JLabel lblJ = new JLabel("J");
 		layeredPane_1.setLayer(lblJ, 1);
 		layeredPane.setLayer(lblB, 1);
@@ -295,6 +297,94 @@ public class Board extends JFrame {
 		layeredPane.add(lblJ);
 		lblJ.setForeground(Color.WHITE);
 		lblJ.setFont(new Font("Snap ITC", Font.BOLD, 33));
+
+		// Các cột trong bản đồ người chơi
+		JLabel lblAAA1 = new JLabel("0  1  2  3  4  5  6  7  8  9");
+		lblAAA1.setBounds(800, 244, 577, 43);
+		layeredPane.setLayer(lblAAA1, 1);
+		layeredPane.add(lblAAA1);
+		lblAAA1.setForeground(Color.WHITE);
+		lblAAA1.setFont(new Font("Snap ITC", Font.BOLD, 31));
+
+		// Hàng A bản đồ của người chơi
+		JLabel lblA1 = new JLabel("A");
+		layeredPane.setLayer(lblA1, 1);
+		lblA1.setBounds(739, 287, 32, 52);
+		layeredPane.add(lblA1);
+		lblA1.setForeground(Color.WHITE);
+		lblA1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng B bản đồ của người chơi
+		JLabel lblB1 = new JLabel("B");
+		layeredPane.setLayer(lblB1, 1);
+		lblB1.setBounds(739, 339, 32, 52);
+		layeredPane.add(lblB1);
+		lblB1.setForeground(Color.WHITE);
+		lblB1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng C bản đồ của người chơi
+		JLabel lblC1 = new JLabel("C");
+		layeredPane.setLayer(lblC1, 1);
+		lblC1.setBounds(739, 391, 32, 52);
+		layeredPane.add(lblC1);
+		lblC1.setForeground(Color.WHITE);
+		lblC1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng D bản đồ của người chơi
+		JLabel lblD1 = new JLabel("D");
+		layeredPane.setLayer(lblD1, 1);
+		lblD1.setBounds(739, 443, 32, 52);
+		layeredPane.add(lblD1);
+		lblD1.setForeground(Color.WHITE);
+		lblD1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng E bản đồ của người chơi
+		JLabel lblE1 = new JLabel("E");
+		layeredPane.setLayer(lblE1, 1);
+		lblE1.setBounds(739, 495, 32, 52);
+		layeredPane.add(lblE1);
+		lblE1.setForeground(Color.WHITE);
+		lblE1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng F bản đồ của người chơi
+		JLabel lblF1 = new JLabel("F");
+		layeredPane.setLayer(lblF1, 1);
+		lblF1.setBounds(739, 547, 32, 52);
+		layeredPane.add(lblF1);
+		lblF1.setForeground(Color.WHITE);
+		lblF1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng G bản đồ của người chơi
+		JLabel lblG1 = new JLabel("G");
+		layeredPane.setLayer(lblG1, 1);
+		lblG1.setBounds(739, 599, 32, 52);
+		layeredPane.add(lblG1);
+		lblG1.setForeground(Color.WHITE);
+		lblG1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng H bản đồ của người chơi
+		JLabel lblH1 = new JLabel("H");
+		layeredPane.setLayer(lblH1, 1);
+		lblH1.setBounds(739, 651, 32, 52);
+		layeredPane.add(lblH1);
+		lblH1.setForeground(Color.WHITE);
+		lblH1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng I bản đồ của người chơi
+		JLabel lblI1 = new JLabel("I");
+		layeredPane.setLayer(lblI1, 1);
+		lblI1.setBounds(739, 703, 32, 52);
+		layeredPane.add(lblI1);
+		lblI1.setForeground(Color.WHITE);
+		lblI1.setFont(new Font("Snap ITC", Font.BOLD, 33));
+		
+		// Hàng J bản đồ của người chơi
+		JLabel lblJ1 = new JLabel("J");
+		layeredPane_1.setLayer(lblJ1, 1);
+		lblJ1.setBounds(739, 755, 32, 52);
+		layeredPane.add(lblJ1);
+		lblJ1.setForeground(Color.WHITE);
+		lblJ1.setFont(new Font("Snap ITC", Font.BOLD, 33));
 
 		// Commentary Box
 		JLabel lblCommentaryBox = new JLabel("Commentary Box");
