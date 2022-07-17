@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-17T13:44:56.592Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.132 Safari/537.36" etag="YUJ0ByDj1F1HdvfbvxKE" version="20.1.1" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2022-07-17T13:45:28.868Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.132 Safari/537.36" etag="cvZGn5HxpMhqr-9gxatN" version="20.1.1" type="github" pages="8">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="UML">
     <mxGraphModel dx="1471" dy="695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -841,7 +841,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2eFBIYCcNW01YJbX844N" name="Biểu đồ trình tự PlayGame">
-    <mxGraphModel dx="2398" dy="1093" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1698" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1140,7 +1140,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="f5T63k6Mxykr1vQptAyK" name="Biểu đồ trình tự SetShip">
-    <mxGraphModel dx="1226" dy="1777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2038" dy="2098" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1379,14 +1379,6 @@
             <mxPoint x="7" y="31" as="offset" />
           </mxGeometry>
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="jgq3P15CQa50jO-A3Xrx" name="Page-9">
-    <mxGraphModel dx="1471" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
